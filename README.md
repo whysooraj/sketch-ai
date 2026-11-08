@@ -108,8 +108,16 @@ uv pip install -r backend/requirements.txt
 # Run the test suite
 PYTHONPATH=backend pytest backend/tests -v
 
-# Start the FastAPI server
+# Start the FastAPI server (bash/zsh)
+source .venv/bin/activate
 PYTHONPATH=backend uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+# In fish shell:
+source .venv/bin/activate.fish
+PYTHONPATH=backend uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+# Or directly without activating:
+PYTHONPATH=backend .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 The API will be accessible at `http://localhost:8000` with Swagger documentation at `http://localhost:8000/docs`.
