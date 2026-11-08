@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+dist/
+out/
+.env*.local
+
+# Storage artifacts (transient)
+backend/app/storage/bundles/
+backend/app/storage/jobs/
+backend/app/storage/preprocessed/
+backend/app/storage/results/
+backend/app/storage/uploads/job_*
+backend/app/storage/uploads/temp_*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
